@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia Ideial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="Site.js/script.js.js"></script>
+  <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+  <script src="./weatherapi.js" defer></script>
+</head>
+<body>
+  <style>
+    body {
+      background: linear-gradient(270deg, #2ce6ff, #2711f3, #8af3a1, #c7e70e);
+      background-size: 600% 600%;
+      animation: GradientAnimation 10s ease infinite;
+    }
+
+    @keyframes GradientAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+  <div class="quadrado"></div>
+  <style>
+    .quadrado {
+        width: 900px;         /* largura */
+        height: 2000px;        /* altura */
+        background: #e0e0e0;     /* cor branca */
+        border: 2px solid #000000; /* opcional: borda cinza */
+        position: absolute;   /* permite posicionar onde quiser */
+        top: 100px;           /* distância do topo */
+        left: 230px;          /* distância da esquerda */
+        border-radius: 20px; /* borda arredondada */
+    }
+  </style>
+  <img src="Fotoshtml/sun.png" class="icone" width="60" height="60">
+  <style>
+    .icone {
+        position: absolute;
+        top: 145px;   /* distância do topo */
+        left: 480px;  /* distância da esquerda */
+    }
+    </style>
+
+    <img src="Fotoshtml/sun.png" class="icone-sol" width="60" height="60">
+    <style>
+      .icone-sol {
+          position: absolute;
+          top: 145px;   /* distância do topo */
+          left: 800px;  /* distância da esquerda */
+      }
+      </style>
+    <div class="texto-posicionado"><strong>Dia Ideal</strong></div>
+    <style>
+      .texto-posicionado {
+    position: absolute;
+    top: 140px;   /* distância do topo */
+    left: 550px;  /* distância da esquerda */
+    font-size: 60px;
+    color: #000;
+}
+    </style>
+    <div class="texto-temperatura"><strong>Temperatura</strong></div>
+    <style>
+      .texto-temperatura {
+    position: absolute;
+    top: 290px; 
+    left: 350px;
+    font-size: 40px;
+    color: #000;
+}
+    </style>
+      <div class="linha-horizontal"></div>
+      <style>
+        .linha-horizontal {
+    position: absolute;
+    top: 250px;
+    left: 330px;
+    width: 700px;
+    height: 2px;
+    background-color: #000;
+        }
+      </style>
+
+      <div class="texto-clima"><strong>Clima</strong></div>
+      <style>
+        .texto-clima {
+    position: absolute;
+    top: 290px;
+    left: 750px;
+    font-size: 40px;
+    color: #000;
+
+        }
+      </style>
+      
+        <div class="linha-horizontal2"></div>
+        <style>
+          .linha-horizontal2 {
+    position: absolute;
+    top: 720px;
+    left: 330px;
+    width: 700px; /* corrigido */
+    height: 2px;
+    background-color: #000;
+}
+
+          </style>
+          <div class="texto-oqvcquer"><strong>O que você quer fazer?</strong></div>
+          <style>
+            .texto-oqvcquer {
+    position: absolute;
+    top: 750px;
+    left: 350px;
+    font-size: 40px;
+    color: #000;
+            }
+          </style>
+          
+          <button class="botao" onclick="document.body.style.background='black'">🌑Mude aqui para modo Escuro🌑</button>
+          <div class="quadrado2"></div>
+          <style>
+            .quadrado2 {
+                width: 400px;         /* largura */
+                height: 200px;        /* altura */
+                background: #e0e0e0;     /* cor branca */
+                border: 2px solid #000000; /* opcional: borda cinza */
+                position: absolute;   /* permite posicionar onde quiser */
+                top: 820px;           /* distância do topo */
+                left: 350px;          /* distância da esquerda */
+                border-radius: 20px; /* borda arredondada */
+            }
+          </style>
+          
+          </div>
+          <main>
+        <div class="weather-card">
+          <style>
+                .weather-card {
+                    position: absolute;
+                    top: 350px;
+                    left: 350px;
+                    width: 300px;
+                    height: 0px;
+                    background: rgba(255, 255, 255, 0.8);
+                    border-radius: 15px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    padding: 20px;
+                }
+                </style>
+            <label>
+                <i class="fas fa-map-marker-alt"></i>
+                <input class="weather-search" placeholder="Nome da Cidade">
+                <style>
+                    .weather-search {
+                        border: none;
+                        border-bottom: 2px solid #000;
+                        background: transparent;
+                        font-size: 20px;
+                        text-align: center;
+                        outline: none;
+                        top: 200px;
+                        left: 500px;
+                    }
+                    </style>
+            </label>
+            <img class="weather-image" src="https://openweathermap.org/img/wn/11d@4x.png" alt="Imagem do clima">
+            <div id="weather-temperature"class="weather-temperature"></div>
+            
+            </style>
+            <div class="weather-city">Guarapuava</div>
+            <style>
+                .weather-city {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            </style>
+            <div class="weather-details">
+              <style>
+                .weather-details {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                }
+              </style>
+                <div class="detail">
+                  <style>
+                    .detail {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                  </style>
+                    <i class="fas fa-water"></i>
+                    <span>
+                        <p class="detail-text">88%</p>
+                        <style>
+                        .detail-text {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin: 0;
+                            top: 200px;
+                        }
+                        </style>
+                        <p>Humidade</p>
+                    </span>
+                </div>
+                <div class="detail">
+                  <style>
+                    .detail {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                  </style>
+                    <i class="fas fa-wind"></i>
+                    <span>
+                        <p class="detail-text">20 KM</p>
+                        <style>
+                        .detail-text {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin: 0; 
+                        }
+                        </style>
+                        <p>Vento</p>
+                        <style>
+                        p {
+                            margin: 1;
+                        }
+                        </style>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="quadrado3"></div>
+    <style>
+      .quadrado3 {
+        width: 900px;         /* largura */
+        height: 100px;        /* altura */
+        background: #2ce6ff;     /* cor branca */
+        border: 2px solid #000000; /* opcional: borda cinza */
+        position: absolute;   /* permite posicionar onde quiser */
+        top: 0px;           /* distância do topo */
+        left: 0px;          /* distância da esquerda */
+        border-radius: 20px; /* borda arredondada */
+      }
+    </style>
+    <h1>oi</h1>
+    </body>
+</html>
