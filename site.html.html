@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!--responsividade do site feita por lucas-->
+<html lang="pt-br">
+
+<head>
+  <meta name="google-site-verification" content="B1yLUUI7PgM0EiSJhlEkvSrRH23SP7h3Ihfw-j9T7hw" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia Ideial</title>
+  <link rel="stylesheet" href=">
+  <script src="site.js"></script>
+  <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="quadrado1">
+    <div class="container-topo">
+      <div class="container-topo2">
+        <img src="Fotoshtml/sun.png" class="icone" width="60" height="60">
+        <!--Aqui é o icones do Titúlo Dia Ideal. By Rafael-->
+        <div class="texto-posicionado1"><strong>Dia Ideal</strong></div> <!--Titúlo. By Rafael-->
+        <img src="Fotoshtml/sun.png" class="icone-sol" width="60" height="60">
+      </div>
+      <div class="linha-horizontal"></div> <!--Linhas Horizontais. By Rafael-->
+      <div class="texto-temperatura"><strong>Temperatura/Informações</strong></div>
+      <!--Texto Temperatura/Informações. By Rafael-->
+      <div class="Container-CoisasAPI">
+        <div class="quadrado2">
+          <div class="texto-posicionado2">Coloque a sua Cidade ao <br> lado e tenha as Informações <br> de Temperatura e
+            de como <br> <!--Instruções-->
+            está o tempo.</div>
+            <div class="linha-horizontal3"></div>
+            <div class="texto-posicionado3">Horário:</div> <!--Horário-->
+            <p id="relogio" class="relogio"></p><!-- Exemplo de um elemento que será atualizado com JavaScript -->
+        </div>
+        <main>
+          <main>
+              <div class="weather-card">
+                <style>
+                  .weather-card {
+                    width: 300px;
+                    height: 410px;
+                    background: rgb(0, 0, 0);
+                    border-radius: 15px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    padding: 20px;
+                  }
+                  </style>
+              <label>
+                <i class="fas fa-map-marker-alt"></i>
+                <input id="weather-search" class="weather-search" placeholder="Nome da Cidade">
+                <style>
+                  .weather-search {
+                    border: none;
+                    border-bottom: 2px solid #000;
+                    background: transparent;
+                    font-size: 20px;
+                    text-align: center;
+                    outline: none;
+                  }
+                  </style>
+              </label>
+              <img id="weather-image" class="weather-image" src="https://openweathermap.org/img/wn/11d@4x.png"
+              alt="Imagem do clima">
+              <div id="weather-temperature" class="weather-temperature"></div>
+              
+            </style>
+            <div id="weather-city" class="weather-city"></div>
+            <style>
+              .weather-city {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 10px;
+              }
+              </style>
+              <div class="weather-details">
+                <style>
+                  .weather-details {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                  }
+                  </style>
+                <div class="detail">
+                  <style>
+                    .detail {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                    }
+                    </style>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="linha-horizontal2"></div>
+          <div class="texto-oqvcquer"><strong>O que você quer fazer?</strong></div><!--Aqui é a pergunta de o que a pessoa vai fazer. By Lucas-->
+          <div class="container-opcoes"> <!--Aqui é as Checkbox para ver o Dia Ideial. By Lucas-->
+            <input type="radio" class="opcao" id="opcao1" name="escolha" value="Primeira">
+            <label for="opcao1" class="opcao">piquenique</label><br>
+            <input type="radio" class="opcao" id="opcao2" name="escolha" value="Segunda">
+        <label for="opcao2" class="opcao">ir para a piscina</label><br>
+  
+        <input type="radio" class="opcao" id="opcao3" name="escolha" value="terceira">
+        <label for="opcao3" class="opcao">ir tomar sorvete</label><br>
+        <input type="radio" class="opcao" id="opcao4" name="escolha" value="quarta">
+        <label for="opcao4" class="opcao">fazer trilha</label><br>
+        <input type="radio" class="opcao" id="opcao5" name="escolha" value="quinta">
+        <label for="opcao5" class="opcao">praticar esportes</label><br>
+        <input type="radio" class="opcao" id="opcao6" name="escolha" value="sexta">
+        <label for="opcao6" class="opcao">encontro de amigos</label><br>
+        <input type="radio" class="opcao" id="opcao7" name="escolha" value="Setima">
+        <label for="opcao7" class="opcao">passear no centro</label><br>
+        <input type="radio" class="opcao" id="opcao8" name="escolha" value="Oitava">
+        <label for="opcao8" class="opcao">ir para praia</label><br>
+      </div>
+      <h2 class="texto-tempo">Em quanto tempo você<br> quer fazer isso?</h2><!--Aqui pergunta em quanto tempo a pessoa quer fazer algo. By Lucas-->
+      <div class="linha1">
+      <input type="radio" class="opcao2" id="opcao1o" name="escolha2" value="Primeira2">
+      <label for="opcao1i" class="opcao2">2 dias</label><br>
+      <!--lucas esteve aqui-->
+      <input type="radio" class="opcao2" id="opcao2o" name="escolha2" value="Segunda2">
+      <label for="opcao2i" class="opcao2">4 dias</label><br>
+      </div>
+      <div class="linha2">
+      <input type="radio" class="opcao2" id="opcao3o" name="escolha2" value="terceira2">
+      <label for="opcao3i" class="opcao2">1 semana</label><br>
+      <input type="radio" class="opcao2" id="opcao4o" name="escolha2" value="quarta2">
+      <label for="opcao4i" class="opcao2">2 semana</label><br>
+      </div>
+      <button class="botao1">Ver o<br>dia ideal</button> <!--Botão Ver dia ideal. By Rafael(será?!?) -->
+      <div class="quadrado3"></div>
+      <div class="quadrado4"></div>
+    </main>
+  </div>
+  
+  <nav class="menu-desktop"></nav>
+</body>
+
+</html>
